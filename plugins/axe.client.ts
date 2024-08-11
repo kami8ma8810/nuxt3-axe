@@ -1,5 +1,7 @@
 import { defineNuxtPlugin } from '#app';
 import VueAxe from 'vue-axe';
+console.log('VueAxe', VueAxe)
+// NOTE:多分vuepopupは存在しない
 
 export default defineNuxtPlugin(async (nuxtApp) => {
     console.log('1')
