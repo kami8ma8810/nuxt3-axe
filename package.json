@@ -12,5 +12,9 @@
   "dependencies": {
     "nuxt": "^3.12.4",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.0",
+    "vue-axe": "^2.4.4"
   }
 }
