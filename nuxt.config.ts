@@ -18,9 +18,9 @@ export default defineNuxtConfig({
       include: process.env.NODE_ENV === 'development' ? ['axe-core'] : []
     },
   },
-  runtimeConfig: {
-    public: {
-      env: process.env.NODE_ENV || 'development',
-    }
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     env: process.env.NODE_ENV || 'development',
+  //   }
+  // },
 })

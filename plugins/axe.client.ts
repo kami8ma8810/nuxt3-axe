@@ -1,8 +1,9 @@
 import { defineNuxtPlugin } from '#app';
 
 export default defineNuxtPlugin(async (nuxtApp) => {
-    const config = useRuntimeConfig();
-    if (config.public.env === 'development') {
+    // const config = useRuntimeConfig();
+    // if (config.public.env === 'development') {
+    if (process.env.NODE_ENV === 'development') {
         try {
             const axeCore = await import('axe-core')
             // const results = await axeCore.default.run() // デフォルト設定で実行（参照：https://www.deque.com/axe/core-documentation/api-documentation/）
@@ -21,5 +22,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
         } catch (error) {
             console.error('error running axe-core:', error)
         }
+    }else{
+        console.log('axe-core is not running in development mode');
     }
 });
